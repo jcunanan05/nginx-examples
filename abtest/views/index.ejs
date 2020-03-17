@@ -11,10 +11,12 @@
       defer
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
-    <title>Site A</title>
+    <title>Site A <%= port %></title>
   </head>
   <body>
-    <header class="hero is-success is-fullheight">
+    <header
+      class="hero <%= port === '3000' ? 'is-success' : 'is-info' %> is-fullheight"
+    >
       <!-- Hero head: will stick at the top -->
       <div class="hero-head">
         <header class="navbar">
@@ -61,7 +63,7 @@
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title">
-            Title
+            <%= title %>
           </h1>
           <h2 class="subtitle">
             Subtitle
