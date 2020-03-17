@@ -15,7 +15,7 @@ const parseArgs = require("minimist");
 const args = parseArgs(process.argv.slice(2));
 const { portNumber = "3000" } = args;
 
-var port = normalizePort(portNumber || "3000");
+var port = normalizePort(portNumber);
 app.set("port", port);
 
 /**
